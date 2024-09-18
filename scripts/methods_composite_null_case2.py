@@ -4,18 +4,6 @@ import pickle
 from glob import glob
 from scipy.stats import permutation_test
 
-def extend_arr(arr, l): 
-    """Extend given array to length l by 
-    buffering with final value of array"""
-        
-    if len(arr) < l: 
-        buffer = [arr[-1]]*(l-len(arr))
-        arr.extend(buffer)
-        assert len(arr) == l
-
-    return arr
-
-
 def test_by_betting(seq1, seq2, d, epsilon, alpha): 
     """Run testing by betting algorithm with ONS betting strategy 
     on given sequences"""
@@ -128,7 +116,7 @@ def shuffle_sequences(seq1, seq2, shift_time=None):
         np.random.shuffle(s2)
     return s1, s2
 
-# case-2
+# Case-2
 def test_stat(x, y, axis):
     """Test statistic for permutation test"""
     return np.abs(np.mean(x, axis=axis) - np.mean(y, axis=axis))
