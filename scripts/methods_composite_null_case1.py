@@ -4,18 +4,6 @@ import pickle
 from glob import glob
 from scipy.stats import permutation_test
 
-def extend_arr(arr, l): 
-    """Extend given array to length l by 
-    buffering with final value of array"""
-        
-    if len(arr) < l: 
-        buffer = [arr[-1]]*(l-len(arr))
-        arr.extend(buffer)
-        assert len(arr) == l
-
-    return arr
-
-
 def test_by_betting(seq1, seq2, d, epsilon, alpha): 
     """Run testing by betting algorithm with ONS betting strategy 
     on given sequences"""
@@ -72,14 +60,9 @@ def betting_experiment(seq1, seq2, epsilon, alphas, iters, shift_time=None):
     dt = np.max(diff)
     print(dt)
     d = 1/(2*dt)
-    for _ in range(iters): 
-        if shift_time != None: 
-            s1, s2 = shuffle_with_shift(seq1, seq2, shift_time)
-        else: 
-            np.random.shuffle(s1)
-            np.random.shuffle(s2)
-        
-
+    for i in range(iters): 
+        np.random.seed(i)
+        s1, s2 = shuffle_sequences(seq1, seq2, shift_time)
         taus = []
         rejects = []
         for alpha in alphas: 
@@ -92,37 +75,47 @@ def betting_experiment(seq1, seq2, epsilon, alphas, iters, shift_time=None):
         
     return results, rejections
 
-def shuffle_with_shift(seq1, seq2, shift_time): 
-    """Randomly shuffle given sequences but respecting shift_time. 
-    All observations before (after) shift_time remain (before) after in 
-    shuffled result"""
-
-    s1_pre, s1_post = seq1[:shift_time], seq1[shift_time:]
-    s2_pre, s2_post = seq2[:shift_time], seq2[shift_time:]
-    np.random.shuffle(s1_pre), np.random.shuffle(s1_post)
-    np.random.shuffle(s2_pre), np.random.shuffle(s2_post)
-    s1 = np.concatenate((s1_pre, s1_post))
-    s2 = np.concatenate((s2_pre, s2_post))
-    
-    return s1, s2
+def shuffle_sequences(seq1, seq2, shift_time=None):
+    """Shuffle sequences while ensure the same order for different methods."""
+    if shift_time is not None:
+        # Split sequences into parts before and after shift_time
+        s1_pre, s1_post = seq1[:shift_time], seq1[shift_time:]
+        s2_pre, s2_post = seq2[:shift_time], seq2[shift_time:]
         
-
-            
+        # Shuffle each part separately
+        np.random.shuffle(s1_pre)
+        np.random.shuffle(s1_post)
+        np.random.shuffle(s2_pre)
+        np.random.shuffle(s2_post)
+        
+        # Concatenate shuffled parts back together
+        s1 = np.concatenate((s1_pre, s1_post))
+        s2 = np.concatenate((s2_pre, s2_post))
+    else:
+        # Shuffle the entire sequences
+        s1, s2 = np.copy(seq1), np.copy(seq2)
+        np.random.shuffle(s1)
+        np.random.shuffle(s2)
+    return s1, s2
+    
+   
 def test_stat(x, y, axis):
     """Test statistic for permutation test"""
-    return np.mean(x, axis=axis) - np.mean(y, axis=axis)
+    return np.abs(np.mean(x, axis=axis) - np.mean(y, axis=axis))
 
-def perm_test(seq1, seq2, p):    
-    """Perform permutation test"""
+
+def perm_test(seq1, seq2, e, p):    
+    """Perform permutation test with a threshold e"""
     
     res = permutation_test((seq1, seq2), test_stat, vectorized=True,
-                           n_resamples=2000, alternative='two-sided')
-
-    if res.pvalue <= p: 
+                           n_resamples=2000, alternative='greater', permutation_type='samples')
+    
+    if res.statistic > e and res.pvalue <= p: 
         return True 
     return False
 
-def seq_perm_test(seq1, seq2, k, p=0.05, bonferroni=False): 
+
+def seq_perm_test(seq1, seq2, e, k, p=0.05, bonferroni=False): 
     """Perform sequential permutation test at given significance level (p). 
     Hypothesis is tested after each k observations. 
     If indicated, perform bonferroni like correction by dividing required significance
@@ -131,25 +124,25 @@ def seq_perm_test(seq1, seq2, k, p=0.05, bonferroni=False):
     l = min(len(seq1), len(seq2))
     for i in range(int(l/k)): 
         pi = p / 2**(i+1) if bonferroni else p
-        if perm_test(seq1[i*k:k*(i+1)], seq2[i*k:k*(i+1)], pi): 
+        if perm_test(seq1[i*k:k*(i+1)], seq2[i*k:k*(i+1)], e, pi): 
+            # print('Reject')
             return k*(i+1), 'reject'
-    return l, 'sustain'
+    return l+10, 'sustain'
+    
 
-def seq_perm_test_experiment(seq1, seq2, alphas, iters, k, bonferroni=False, shift_time=None): 
+def seq_perm_test_experiment(seq1, seq2, epsilon, alphas, iters, k, bonferroni=False, shift_time=None): 
     """Helper to run batch of sequential permutation tests. k indicates window size"""
     
     results = []
     rejections = []
     s1, s2 = seq1, seq2
-    for _ in range(iters): 
+    for i in range(iters): 
         taus, rejects = [], []
-        if shift_time != None: 
-            s1, s2 = shuffle_with_shift(seq1, seq2, shift_time)
-        else: 
-            np.random.shuffle(s1)
-            np.random.shuffle(s2)
+        np.random.seed(i)
+        s1, s2 = shuffle_sequences(seq1, seq2, shift_time)
+    
         for alpha in alphas: 
-            steps, reject = seq_perm_test(s1, s2, p=alpha, k=k, bonferroni=bonferroni)
+            steps, reject = seq_perm_test(s1, s2, e=epsilon, p=alpha, k=k, bonferroni=bonferroni)
             taus.append(steps)
             rejects.append(True if reject == 'reject' else False)
         results.append(taus)
@@ -157,13 +150,3 @@ def seq_perm_test_experiment(seq1, seq2, alphas, iters, k, bonferroni=False, shi
         
     return results, rejections
     
-
-def get_mean_std(arr): 
-    return np.mean(arr, axis=0), np.std(arr, axis=0)
-
-def plt_mean_std(ax, arr, alphas, label, color='navy', plot_std=False, **kwargs): 
-    """Plot helper"""
-    mean, std = get_mean_std(arr)
-    ax.plot(alphas, mean, label=label, c=color, **kwargs)
-    if plot_std: 
-        ax.fill_between(alphas, mean-std/2, mean+std/2, alpha=0.05, color=color)
