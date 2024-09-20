@@ -1,18 +1,3 @@
-# ---
-# jupyter:
-#   jupytext:
-#     text_representation:
-#       extension: .py
-#       format_name: light
-#       format_version: '1.5'
-#       jupytext_version: 1.16.2
-#   kernelspec:
-#     display_name: Python (myenv)
-#     language: python
-#     name: myenv
-# ---
-
-# +
 import json
 import argparse
 import vertexai
@@ -35,24 +20,6 @@ def truncate_texts(real_text, sample_text):
     max_length = min(len(real_words), len(sample_words))
     return ' '.join(real_words[:max_length]), ' '.join(sample_words[:max_length])
 
-'''
-def generate_samples(data, model):
-    generated_data = {'original': [], 'sampled': []}
-    tokenizer = AutoTokenizer.from_pretrained('t5-small')  # Initialize the tokenizer
-    
-    for item in data:
-        tokens = tokenizer.tokenize(item['document'])
-        prefix_tokens = tokens[:30]
-        prefix = tokenizer.convert_tokens_to_string(prefix_tokens)
-        full_prompt = f"You are an Olympic News writer. Please write an article with about 150 words starting exactly with '{prefix}'."
-
-        response = model.generate_content([Part.from_text(full_prompt)])
-        truncated_real, truncated_sample = truncate_texts(item['document'], response.text)
-        generated_data['original'].append(truncated_real)
-        generated_data['sampled'].append(truncated_sample)
-        
-    return generated_data
-'''
 def generate_samples(data, model):
     generated_data = {'original': [], 'sampled': []}
     tokenizer = AutoTokenizer.from_pretrained('t5-small')  # Initialize the tokenizer
@@ -68,11 +35,12 @@ def generate_samples(data, model):
             truncated_original, truncated_sampled = truncate_texts(item['document'], response.text)
             generated_data['original'].append(truncated_original)
             generated_data['sampled'].append(truncated_sampled)
-        except Exception as e:  # 捕获由于安全过滤器或其他原因引发的异常
+        except Exception as e:  
             print(f"Skipping item due to safety filters or other issues: {e}")
             continue
 
     return generated_data
+    
 def main(args):
     vertexai.init(project=args.project_id, location=args.location_name)
     model = GenerativeModel(model_name=args.model_name)
