@@ -23,3 +23,9 @@ Folders created for our experiments include:
 * ./exp_gpt3to4 -> experiments for detecting human-written or LLM-generated texts based on the exsiting dataset of [Fast-DetectGPT] (https://github.com/baoguangsheng/fast-detect-gpt). Source models of LLM-generated texts are GPT-3, ChatGPT and GPT-4, the scoring model used to calculate the value of eight score functions is GPT-Neo-2.7B.
   
 Firstly, we produce machine-generated-texts by source models. Then, we score human-written-texts and machine-generated  and real news by the above score functions. Next, we input 
+
+
+### Citation
+If you find this work useful, you can cite it with the following BibTex entry:
+
+   
