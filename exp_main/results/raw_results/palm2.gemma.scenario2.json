@@ -1,7 +1,7 @@
 [
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.palm2.gemma/xsum.palm2.gemma_2b.sampling_discrepancy.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.palm2.gemma/olympic.palm2.gemma_2b.sampling_discrepancy.json",
+        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.palm2.gemma/xsum.palm2.gemma_2b.gemma_2b.sampling_discrepancy.json",
+        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.palm2.gemma/olympic.palm2.gemma_2b.gemma_2b.sampling_discrepancy.json",
         "rejection_time": [
             69.0,
             62.0,
