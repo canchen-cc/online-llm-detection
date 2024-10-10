@@ -5,7 +5,7 @@ import math
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
-from methods_case1 import betting_experiment
+from methods_scenario1 import betting_experiment
 from fractions import Fraction
 
 def load_data(file_path, data_type):
