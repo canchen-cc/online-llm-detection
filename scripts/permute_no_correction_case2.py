@@ -43,6 +43,8 @@ def process_files(file1, type1, file2, type2, file3, type3, k, alphas, iters, sh
     
     return {
         "k_value": k,
+        "seq1_dataset": file1,
+        "seq2_dataset": file2,
         "rejection_time": np.ceil(np.mean(perm_k_tau, axis=0)), #rejection time
         "power": np.mean(perm_k_tpr, axis=0),#true=1/false=0
         "fpr": np.mean(perm_k_fdr, axis=0) #type-1 error
