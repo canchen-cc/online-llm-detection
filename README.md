@@ -25,12 +25,16 @@ Folders created for our experiments include:
 ** ././text_score -> scores of human-written texts and LLM-generated texts.
 ** ././results -> raw results of detecting human-written texts and LLM-generated texts with a specific score function under each configuration, results of 10 score functions under the same configuration which are used to plot; results of plotting.
 
-
+## Scenarios
+Two scenarios are considered, including:
+* Scenario 1 (oracle): with the assumption that one has prior knowledge of parameters $d_*$ and $\epsilon$. 
+* Scenario 2: we specify the value of $\epsilon$ according to 20 human-written texts. The value of $d_*$ (or $d_t$) is estimated using samples collected in the first 10 times steps, and then the hypothesis testing is started thereafter.
+  
 ## Process
-* Firslty, we let a source model generate texts based on each human-written texts.
-* Then, we score human-written-texts and LLM-generated texts.
-* Next, we use our algorithm to detect the source of a sequence of texts. The 
-* If the source is human, we calculate the false positive rate (FPR), otherwise we report the rejection time, i.e., the time that the source is declared to be an LLM.
+* Firslty, we let a source model generate the equal number of texts based on each human-written text.
+* Next, we score all the human-written-texts and LLM-generated texts.
+* Then, we use our methods to detect the source of a sequence of texts.  
+* For each significance level, we calculate the false positive rate (FPR) if the source is human, otherwise we report the rejection time, i.e., the time step at which the source is declared to be an LLM.
 
 
 ### Citation
