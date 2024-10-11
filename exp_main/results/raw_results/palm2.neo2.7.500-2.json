@@ -1,7 +1,7 @@
 [
     {
-        "score_function": "sampling_discrepancy",
-        "time_budget": 500,
+        "score_function": "sampling_discrepancy_analytic",
+        "time_budget": 150,
         "rejection_time": [
             40.0,
             36.0,
@@ -71,7 +71,7 @@
     },
     {
         "score_function": "perturbation_100",
-        "time_budget": 500,
+        "time_budget": 150,
         "rejection_time": [
             70.0,
             63.0,
@@ -141,7 +141,7 @@
     },
     {
         "score_function": "npr",
-        "time_budget": 500,
+        "time_budget": 150,
         "rejection_time": [
             82.0,
             74.0,
@@ -211,7 +211,7 @@
     },
     {
         "score_function": "lrr",
-        "time_budget": 500,
+        "time_budget": 150,
         "rejection_time": [
             62.0,
             55.0,
@@ -281,7 +281,7 @@
     },
     {
         "score_function": "logrank",
-        "time_budget": 500,
+        "time_budget": 150,
         "rejection_time": [
             59.0,
             53.0,
@@ -351,7 +351,7 @@
     },
     {
         "score_function": "likelihood",
-        "time_budget": 500,
+        "time_budget": 150,
         "rejection_time": [
             59.0,
             54.0,
@@ -421,7 +421,7 @@
     },
     {
         "score_function": "entropy",
-        "time_budget": 500,
+        "time_budget": 150,
         "rejection_time": [
             235.0,
             209.0,
@@ -491,7 +491,7 @@
     },
     {
         "score_function": "dna_gpt",
-        "time_budget": 500,
+        "time_budget": 150,
         "rejection_time": [
             71.0,
             63.0,
@@ -561,7 +561,7 @@
     },
     {
         "score_function": "roberta-base-openai-detector",
-        "time_budget": 500,
+        "time_budget": 150,
         "rejection_time": [
             33.0,
             29.0,
@@ -631,7 +631,7 @@
     },
     {
         "score_function": "roberta-large-openai-detector",
-        "time_budget": 500,
+        "time_budget": 150,
         "rejection_time": [
             39.0,
             36.0,
