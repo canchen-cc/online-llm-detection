@@ -1,7 +1,7 @@
 [
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.palm2.gemma/xsum.palm2.gemma_2b.gemma_2b.sampling_discrepancy.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.palm2.gemma/olympic.palm2.gemma_2b.gemma_2b.sampling_discrepancy.json",
+        "score_function": "sampling_discrepancy",
+        "time_budget": 500,
         "rejection_time": [
             69.0,
             62.0,
@@ -70,8 +70,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.palm2.gemma/xsum.palm2.gemma_2b.perturbation_100.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.palm2.gemma/olympic.palm2.gemma_2b.perturbation_100.json",
+        "score_function": "perturbation_100",
+        "time_budget": 500,
         "rejection_time": [
             106.0,
             96.0,
@@ -140,8 +140,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.palm2.gemma/xsum.palm2.gemma_2b.npr.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.palm2.gemma/olympic.palm2.gemma_2b.npr.json",
+        "score_function": "npr",
+        "time_budget": 500,
         "rejection_time": [
             86.0,
             78.0,
@@ -210,8 +210,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.palm2.gemma/xsum.palm2.gemma_2b.lrr.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.palm2.gemma/olympic.palm2.gemma_2b.lrr.json",
+        "score_function": "lrr",
+        "time_budget": 500,
         "rejection_time": [
             83.0,
             75.0,
@@ -280,8 +280,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.palm2.gemma/xsum.palm2.gemma_2b.logrank.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.palm2.gemma/olympic.palm2.gemma_2b.logrank.json",
+        "score_function": "logrank",
+        "time_budget": 500,
         "rejection_time": [
             81.0,
             73.0,
@@ -350,8 +350,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.palm2.gemma/xsum.palm2.gemma_2b.likelihood.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.palm2.gemma/olympic.palm2.gemma_2b.likelihood.json",
+        "score_function": "likelihood",
+        "time_budget": 500,
         "rejection_time": [
             79.0,
             71.0,
@@ -420,8 +420,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.palm2.gemma/xsum.palm2.gemma_2b.entropy.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.palm2.gemma/olympic.palm2.gemma_2b.entropy.json",
+        "score_function": "entropy",
+        "time_budget": 500,
         "rejection_time": [
             176.0,
             159.0,
@@ -490,8 +490,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.palm2.gemma/xsum.palm2.gemma_2b.dna_gpt.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.palm2.gemma/olympic.palm2.gemma_2b.dna_gpt.json",
+        "score_function": "dna_gpt",
+        "time_budget": 500,
         "rejection_time": [
             95.0,
             85.0,
@@ -560,8 +560,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.palm2.gemma/xsum.palm2.roberta-base-openai-detector.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.palm2.gemma/olympic.palm2.roberta-base-openai-detector.json",
+        "score_function": "roberta-base-openai-detector",
+        "time_budget": 500,
         "rejection_time": [
             70.0,
             64.0,
@@ -630,8 +630,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.palm2.gemma/xsum.palm2.roberta-large-openai-detector.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.palm2.gemma/olympic.palm2.roberta-large-openai-detector.json",
+        "score_function": "roberta-large-openai-detector",
+        "time_budget": 500,
         "rejection_time": [
             100.0,
             90.0,
