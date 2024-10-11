@@ -1,7 +1,7 @@
 [
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/black_box/pubmed/gpt-4/pubmed_gpt-4.gpt-j-6B_gpt-neo-2.7B.sampling_discrepancy_analytic.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/black_box/pubmed/gpt-3.5-turbo/pubmed_gpt-3.5-turbo.gpt-j-6B_gpt-neo-2.7B.sampling_discrepancy_analytic.json",
+        "score_function": "sampling_discrepancy_analytic",
+        "time_budget": 150,
         "rejection_time": [
             62.0,
             55.0,
@@ -70,8 +70,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/black_box/pubmed/gpt-4/pubmed_gpt-4.t5-11b_gpt-neo-2.7B.perturbation_100.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/black_box/pubmed/gpt-3.5-turbo/pubmed_gpt-3.5-turbo.t5-11b_gpt-neo-2.7B.perturbation_100.json",
+        "score_function": "perturbation_100",
+        "time_budget": 150,
         "rejection_time": [
             136.0,
             122.0,
@@ -140,8 +140,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/black_box/pubmed/gpt-4/pubmed_gpt-4.t5-11b_gpt-neo-2.7B.npr.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/black_box/pubmed/gpt-3.5-turbo/pubmed_gpt-3.5-turbo.t5-11b_gpt-neo-2.7B.npr.json",
+        "score_function": "npr",
+        "time_budget": 150,
         "rejection_time": [
             150.0,
             150.0,
@@ -210,8 +210,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/black_box/pubmed/gpt-4/pubmed_gpt-4.t5-11b_gpt-neo-2.7B.lrr.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/black_box/pubmed/gpt-3.5-turbo/pubmed_gpt-3.5-turbo.t5-11b_gpt-neo-2.7B.lrr.json",
+        "score_function": "lrr",
+        "time_budget": 150,
         "rejection_time": [
             110.0,
             98.0,
@@ -280,8 +280,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/black_box/pubmed/gpt-4/pubmed_gpt-4.gpt-neo-2.7B.logrank.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/black_box/pubmed/gpt-3.5-turbo/pubmed_gpt-3.5-turbo.gpt-neo-2.7B.logrank.json",
+        "score_function": "logrank",
+        "time_budget": 150,
         "rejection_time": [
             69.0,
             62.0,
@@ -350,8 +350,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/black_box/pubmed/gpt-4/pubmed_gpt-4.gpt-neo-2.7B.likelihood.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/black_box/pubmed/gpt-3.5-turbo/pubmed_gpt-3.5-turbo.gpt-neo-2.7B.likelihood.json",
+        "score_function": "likelihood",
+        "time_budget": 150,
         "rejection_time": [
             67.0,
             60.0,
@@ -420,8 +420,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/black_box/pubmed/gpt-4/pubmed_gpt-4.gpt-neo-2.7B.entropy.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/black_box/pubmed/gpt-3.5-turbo/pubmed_gpt-3.5-turbo.gpt-neo-2.7B.entropy.json",
+        "score_function": "entropy",
+        "time_budget": 150,
         "rejection_time": [
             115.0,
             103.0,
@@ -490,8 +490,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/black_box/pubmed/gpt-4/pubmed_gpt-4.gpt-neo-2.7B.dna_gpt.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/black_box/pubmed/gpt-3.5-turbo/pubmed_gpt-3.5-turbo.gpt-neo-2.7B.dna_gpt.json",
+        "score_function": "dna_gpt",
+        "time_budget": 150,
         "rejection_time": [
             85.0,
             76.0,
@@ -560,8 +560,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/black_box/pubmed/gpt-4/pubmed_gpt-4.roberta-base-openai-detector.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/black_box/pubmed/gpt-3.5-turbo/pubmed_gpt-3.5-turbo.roberta-base-openai-detector.json",
+        "score_function": "roberta-base-openai-detector",
+        "time_budget": 150,
         "rejection_time": [
             140.0,
             131.0,
@@ -630,8 +630,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/black_box/pubmed/gpt-4/pubmed_gpt-4.roberta-large-openai-detector.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/black_box/pubmed/gpt-3.5-turbo/pubmed_gpt-3.5-turbo.roberta-large-openai-detector.json",
+        "score_function": "roberta-large-openai-detector",
+        "time_budget": 150,
         "rejection_time": [
             122.0,
             110.0,
