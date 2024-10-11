@@ -48,9 +48,8 @@ def process_files(file1, type1, file2, type2, file3, type3, k, alphas, iters, sh
     part=show_score_function(file1)
     
     return {
-        "batch_size": k,
         "score_function": part,
-        "time_budget": min_len,
+        "batch_size": k,
         "rejection_time": np.ceil(np.mean(perm_k_tau, axis=0)), #rejection time
         "power": np.mean(perm_k_tpr, axis=0),#true=1/false=0
         "fpr": np.mean(perm_k_fdr, axis=0) #type-1 error
