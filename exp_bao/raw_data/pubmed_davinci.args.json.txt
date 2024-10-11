@@ -1,5 +1,5 @@
 {
-    "output_file": "exp_gpt3to4/data/pubmed_davinci",
+    "output_file": "exp_bao/data/pubmed_davinci",
     "dataset": "pubmed",
     "n_samples": 150,
     "openai_model": "davinci",
