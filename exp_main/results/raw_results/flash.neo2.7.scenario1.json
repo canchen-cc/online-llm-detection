@@ -1,7 +1,7 @@
 [
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.flash.neo2.7/xsum.gemini_1.5_flash.gpt-j-6B.gpt-neo-2.7B.sampling_discrepancy.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.flash.neo2.7/olympic.gemini_1.5_flash.gpt-j-6B.gpt-neo-2.7B.sampling_discrepancy.json",
+        "score_function": "sampling_discrepancy",
+        "time_budget": 500,
         "rejection_time": [
             51.0,
             46.0,
@@ -70,8 +70,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.flash.neo2.7/xsum.gemini_1.5_flash.gpt-neo-2.7B.perturbation_100.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.flash.neo2.7/olympic.gemini_1.5_flash.gpt-neo-2.7B.perturbation_100.json",
+        "score_function": "perturbation_100",
+        "time_budget": 500,
         "rejection_time": [
             98.0,
             88.0,
@@ -140,8 +140,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.flash.neo2.7/xsum.gemini_1.5_flash.gpt-neo-2.7B.npr.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.flash.neo2.7/olympic.gemini_1.5_flash.gpt-neo-2.7B.npr.json",
+        "score_function": "npr",
+        "time_budget": 500,
         "rejection_time": [
             130.0,
             120.0,
@@ -210,8 +210,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.flash.neo2.7/xsum.gemini_1.5_flash.gpt-neo-2.7B.lrr.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.flash.neo2.7/olympic.gemini_1.5_flash.gpt-neo-2.7B.lrr.json",
+        "score_function": "lrr",
+        "time_budget": 500,
         "rejection_time": [
             175.0,
             156.0,
@@ -280,8 +280,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.flash.neo2.7/xsum.gemini_1.5_flash.gpt-neo-2.7B.logrank.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.flash.neo2.7/olympic.gemini_1.5_flash.gpt-neo-2.7B.logrank.json",
+        "score_function": "logrank",
+        "time_budget": 500,
         "rejection_time": [
             117.0,
             105.0,
@@ -350,8 +350,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.flash.neo2.7/xsum.gemini_1.5_flash.gpt-neo-2.7B.likelihood.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.flash.neo2.7/olympic.gemini_1.5_flash.gpt-neo-2.7B.likelihood.json",
+        "score_function": "likelihood",
+        "time_budget": 500,
         "rejection_time": [
             107.0,
             96.0,
@@ -420,8 +420,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.flash.neo2.7/xsum.gemini_1.5_flash.gpt-neo-2.7B.entropy.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.flash.neo2.7/olympic.gemini_1.5_flash.gpt-neo-2.7B.entropy.json",
+        "score_function": "entropy",
+        "time_budget": 500,
         "rejection_time": [
             500.0,
             500.0,
@@ -490,8 +490,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.flash.neo2.7/xsum.gemini_1.5_flash.gpt-neo-2.7B.dna_gpt.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.flash.neo2.7/olympic.gemini_1.5_flash.gpt-neo-2.7B.dna_gpt.json",
+        "score_function": "dna_gpt",
+        "time_budget": 500,
         "rejection_time": [
             252.0,
             224.0,
@@ -560,8 +560,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.flash.neo2.7/xsum.gemini_1.5_flash.roberta-base-openai-detector.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.flash.neo2.7/olympic.gemini_1.5_flash.roberta-base-openai-detector.json",
+        "score_function": "roberta-base-openai-detector",
+        "time_budget": 500,
         "rejection_time": [
             116.0,
             104.0,
@@ -630,8 +630,8 @@
         ]
     },
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.flash.neo2.7/xsum.gemini_1.5_flash.roberta-large-openai-detector.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.flash.neo2.7/olympic.gemini_1.5_flash.roberta-large-openai-detector.json",
+        "score_function": "roberta-large-openai-detector",
+        "time_budget": 500,
         "rejection_time": [
             308.0,
             276.0,
