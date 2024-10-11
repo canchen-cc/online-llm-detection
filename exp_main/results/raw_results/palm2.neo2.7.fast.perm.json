@@ -1,7 +1,7 @@
 [
     {
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.palm2.neo2.7/xsum.palm2.gpt-j-6B.gpt-neo-2.7B.sampling_discrepancy.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.palm2.neo2.7/olympic.palm2.gpt-j-6B.gpt-neo-2.7B.sampling_discrepancy.json",
+        "score_function": "sampling_discrepancy",
+        "time_budget": 500,
         "rejection_time": [
             69.0,
             63.0,
@@ -70,9 +70,8 @@
         ]
     },
     {
-        "k_value": 25,
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.palm2.neo2.7/xsum.palm2.gpt-j-6B.gpt-neo-2.7B.sampling_discrepancy.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.palm2.neo2.7/olympic.palm2.gpt-j-6B.gpt-neo-2.7B.sampling_discrepancy.json",
+        "score_function": "sampling_discrepancy",
+        "batch_size": 25,
         "rejection_time": [
             25.0,
             25.0,
@@ -141,9 +140,8 @@
         ]
     },
     {
-        "k_value": 50,
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.palm2.neo2.7/xsum.palm2.gpt-j-6B.gpt-neo-2.7B.sampling_discrepancy.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.palm2.neo2.7/olympic.palm2.gpt-j-6B.gpt-neo-2.7B.sampling_discrepancy.json",
+        "score_function": "sampling_discrepancy",
+        "batch_size": 50,
         "rejection_time": [
             50.0,
             50.0,
@@ -212,9 +210,8 @@
         ]
     },
     {
-        "k_value": 100,
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.palm2.neo2.7/xsum.palm2.gpt-j-6B.gpt-neo-2.7B.sampling_discrepancy.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.palm2.neo2.7/olympic.palm2.gpt-j-6B.gpt-neo-2.7B.sampling_discrepancy.json",
+        "score_function": "sampling_discrepancy",
+        "batch_size": 100,
         "rejection_time": [
             100.0,
             100.0,
@@ -283,9 +280,8 @@
         ]
     },
     {
-        "k_value": 250,
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.palm2.neo2.7/xsum.palm2.gpt-j-6B.gpt-neo-2.7B.sampling_discrepancy.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.palm2.neo2.7/olympic.palm2.gpt-j-6B.gpt-neo-2.7B.sampling_discrepancy.json",
+        "score_function": "sampling_discrepancy",
+        "batch_size": 250,
         "rejection_time": [
             250.0,
             250.0,
@@ -354,9 +350,8 @@
         ]
     },
     {
-        "k_value": 500,
-        "seq1_dataset": "/Users/canchen/detect_GPT/data/olympic_test/xsum.palm2.neo2.7/xsum.palm2.gpt-j-6B.gpt-neo-2.7B.sampling_discrepancy.json",
-        "seq2_dataset": "/Users/canchen/detect_GPT/data/olympic_test/olympic.palm2.neo2.7/olympic.palm2.gpt-j-6B.gpt-neo-2.7B.sampling_discrepancy.json",
+        "score_function": "sampling_discrepancy",
+        "batch_size": 500,
         "rejection_time": [
             500.0,
             500.0,
