@@ -3,8 +3,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Load result file
-with open('/Users/canchen/detect_GPT/results_to_plot/olympic_test_new/case6_estimate5/palm2.gemma.500.json', 'r') as file:
+# Load results_to_plot file
+
+with open('exp_main/resluts/results_to_plot/flash.gemma.scenario1.json', 'r') as file:
     items = json.load(file)
 
 df_list = []
