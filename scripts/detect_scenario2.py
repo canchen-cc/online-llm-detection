@@ -20,6 +20,11 @@ def load_data(file_path, data_type):
         print(f"Error: Could not read {file_path}")
         return None
 
+def show_score_function(filepath):
+    filename = os.path.basename(filepath)
+    part = filename.split('.')[-2]
+    return part
+
 def process_files(file1, type1, file2, type2, file3, type3, alphas, iters, shift_time):
     data1 = load_data(file1, type1)
     data2 = load_data(file2, type2)
@@ -40,10 +45,12 @@ def process_files(file1, type1, file2, type2, file3, type3, alphas, iters, shift
     betting_tau, betting_tpr = betting_experiment(y1, y2, alphas, iters, shift_time=None)
     _, betting_fpr = betting_experiment(z1, z2, alphas, iters, shift_time=None)
     
+    part=show_score_function(file1)
+    
     
     return {
-        "seq1_dataset": file1,
-        "seq2_dataset": file2,
+        "score_function": part,
+        "time_budget": min_len,
         "rejection_time": np.ceil(np.mean(betting_tau, axis=0)), #rejection time
         "power": np.mean(betting_tpr, axis=0),  #true=1/false=0
         "fpr": np.mean(betting_fpr, axis=0)    #type-1 error 
