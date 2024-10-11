@@ -1,7 +1,7 @@
 {
-    "output_file": "/home/jupyter/results/olympic.gemini_1.5_flash.gemma_2b",
+    "output_file": "./results/olympic.gemini_1.5_flash.gemma_2b",
     "dataset": "xsum",
-    "dataset_file": "/home/jupyter/data/olympic.gemini_1.5_flash",
+    "dataset_file": "./data/olympic.gemini_1.5_flash",
     "pct_words_masked": 0.3,
     "mask_top_p": 0.96,
     "span_length": 2,
@@ -10,6 +10,6 @@
     "mask_filling_model_name": "t5-3b",
     "seed": 0,
     "device": "cuda",
-    "cache_dir": "/home/jupyter/gcs-mount/cache",
-    "hf_token": "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"
+    "cache_dir": "../cache",
+    "hf_token": "xxxxx"
 }
