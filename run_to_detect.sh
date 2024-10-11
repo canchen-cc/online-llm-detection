@@ -1,5 +1,5 @@
 #!/bin/bash
-# Here, we give an example to show how to run scripts to get the detection results.
+# Here, we give an example to show how to run scripts to get the detection results of 10 score functions.
 
 # Setup the environment
 echo "$(date), Setting up environment ..."
