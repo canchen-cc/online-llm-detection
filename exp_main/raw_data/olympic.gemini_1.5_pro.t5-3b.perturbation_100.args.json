@@ -1,7 +1,7 @@
 {
-    "output_file": "exp_main/results/olympic.gemini_1.5_pro.gemma_2b",
+    "output_file": "exp_main/data/olympic.gemini_1.5_pro.gemma_2b",
     "dataset": "xsum",
-    "dataset_file": "exp_main/data/olympic.gemini_1.5_pro",
+    "dataset_file": "exp_main/raw_data/olympic.gemini_1.5_pro",
     "pct_words_masked": 0.3,
     "mask_top_p": 0.96,
     "span_length": 2,
