@@ -23,7 +23,7 @@ for D in $datasets; do
     for M2 in $scoring_models; do
       echo `date`, Evaluating Fast-DetectGPT on ${D}.${M}.${M1}.${M2} ...
       python scripts/fast_detect_gpt.py --reference_model_name ${M1} --scoring_model_name ${M2} --dataset $D \
-                          --dataset_file $data_path/${D}.${M} --output_file $res_path/${D}_${M}.${M2}
+                          --dataset_file $data_path/${D}.${M} --output_file $res_path/${D}.${M}.${M2}
     done
   done
 done
