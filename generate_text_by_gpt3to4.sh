@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This is the scripts to generate tetxs by GPT3, ChatGPT and GPT4 according to Guangsheng Bao (Fast-DetectGPT).
+# This is the script to generate texts by GPT3, ChatGPT and GPT4 according to Guangsheng Bao (Fast-DetectGPT).
 
 # setup the environment
 echo `date`, Setup the environment ...
