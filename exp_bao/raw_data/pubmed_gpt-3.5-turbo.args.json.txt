@@ -1,5 +1,5 @@
 {
-    "output_file": "exp_gpt3to4/results/pubmed_gpt-3.5-turbo",
+    "output_file": "exp_gpt3to4/data/pubmed_gpt-3.5-turbo",
     "dataset": "pubmed",
     "n_samples": 150,
     "openai_base": null,
