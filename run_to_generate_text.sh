@@ -35,4 +35,4 @@ python scripts/jupyter/scripts/palm_generate.py \
 
 echo "palm_generate finished."
 
-echo "All scripts have been executed."
+
