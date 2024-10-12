@@ -9,9 +9,9 @@ mkdir -p results  # Create the results directory if it does not exist
 # and detect the source of file3[type3] (under the null H0) with desired FPR (below the significance level).
 
 # Input scores evaluated by Fast-DetectGPT
-python scripts/detect_scenario1.py --file1 "exp_main/data/xsum.gemini_1.5_flash.gemma_2b.gemma_2b.sampling_discrepancy.json" --type1 "real" \  # the sequence of text x_t (prepared human-written texts)
-                             --file2 "exp_main/data/olympic.gemini_1.5_flash.gemma_2b.gemma_2b.sampling_discrepancy.json" --type2 "samples" \ # the sequence of y_t (the source is gemini-1.5-flash)
-                             --file3 "exp_main/data/olympic.gemini_1.5_flash.gemma_2b.gemma_2b.sampling_discrepancy.json" --type3 "real" \ # the sequence of y_t (the source is human)
+python scripts/detect_scenario1.py --file1 "exp_main/data/xsum.gemini_1.5_flash.gemma_2b.sampling_discrepancy.json" --type1 "real" \  # the sequence of text x_t (prepared human-written texts)
+                             --file2 "exp_main/data/olympic.gemini_1.5_flash.gemma_2b.sampling_discrepancy.json" --type2 "samples" \ # the sequence of y_t (the source is gemini-1.5-flash)
+                             --file3 "exp_main/data/olympic.gemini_1.5_flash.gemma_2b.sampling_discrepancy.json" --type3 "real" \ # the sequence of y_t (the source is human)
                              --iters 1000 --shift_time None --output_file "exp_main/results/raw_results/flash.gemma.scenario1.json"
 
 
