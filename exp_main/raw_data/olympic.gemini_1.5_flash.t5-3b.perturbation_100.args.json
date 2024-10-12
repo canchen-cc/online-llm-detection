@@ -1,5 +1,5 @@
 {
-    "output_file": "exp_main/results/olympic.gemini_1.5_flash.gemma_2b",
+    "output_file": "exp_main/data/olympic.gemini_1.5_flash.gemma_2b",
     "dataset": "xsum",
     "dataset_file": "exp_main/data/olympic.gemini_1.5_flash",
     "pct_words_masked": 0.3,
