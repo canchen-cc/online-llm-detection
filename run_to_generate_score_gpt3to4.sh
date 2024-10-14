@@ -37,8 +37,10 @@ for M in gpt-3.5-turbo gpt-4; do
   done
 done
 
-# evaluate Fast-DetectGPT in the black-box setting
-settings="gpt-j-6B:gpt2-xl gpt-j-6B:gpt-neo-2.7B gpt-j-6B:gpt-j-6B"
+
+# Score texts by different score functions
+# use the score function of Fast-DetectGPT
+settings="gpt-j-6B:gpt-neo-2.7B" # use gpt-j-6B for sampling, and gpt-neo-2.7B for scoring
 for M in $source_models; do
   for D in $datasets; do
     for S in $settings; do
@@ -50,7 +52,7 @@ for M in $source_models; do
   done
 done
 
-# evaluate supervised detectors
+# use the score function of supervised detectors
 supervised_models="roberta-base-openai-detector roberta-large-openai-detector"
 for M in $source_models; do
   for D in $datasets; do
@@ -62,7 +64,7 @@ for M in $source_models; do
   done
 done
 
-# evaluate baselines
+# use the score functions of likelihood, logrank, entropy
 scoring_models="gpt-neo-2.7B"
 for M in $source_models; do
   for D in $datasets; do
@@ -74,7 +76,7 @@ for M in $source_models; do
   done
 done
 
-# evaluate DNA-GPT
+# use the score function of DNA-GPT
 scoring_models="gpt-neo-2.7B"
 for M in $source_models; do
   for D in $datasets; do
@@ -86,8 +88,8 @@ for M in $source_models; do
   done
 done
 
-# evaluate DetectGPT and DetectLLM
-scoring_models="gpt2-xl gpt-neo-2.7B gpt-j-6B"
+# use the score functions of DetectGPT and DetectLLM (lrr, npr)
+scoring_models="gpt-neo-2.7B"
 for M in $source_models; do
   for D in $datasets; do
     M1=t5-11b  # perturbation model
@@ -103,11 +105,3 @@ for M in $source_models; do
   done
 done
 
-# evaluate GPTZero
-for M in $source_models; do
-  for D in $datasets; do
-    echo `date`, Evaluating GPTZero on ${D}_${M} ...
-    python scripts/gptzero.py --dataset $D \
-                          --dataset_file $data_path/${D}_${M} --output_file $res_path/${D}_${M}
-  done
-done
