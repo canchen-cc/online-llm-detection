@@ -1,5 +1,5 @@
 # ONLINE DETECTING LLM-GENERATED TEXTS
-**This code is for ICLR 2025 paper "ONLINE DETECTING LLM-GENERATED TEXTS VIA SEQUENTIAL HYPOTHESIS TESTING BY BETTING "**, where we borrow or extend some code from [Fast-DetectGPT](https://github.com/baoguangsheng/fast-detect-gpt) and [auditing-fairness](https://github.com/ bchugg/auditing-fairness).
+**This code is for ICLR 2025 paper "ONLINE DETECTING LLM-GENERATED TEXTS VIA SEQUENTIAL HYPOTHESIS TESTING BY BETTING "**, where we borrow or extend some code from [Fast-DetectGPT](https://github.com/baoguangsheng/fast-detect-gpt) and [auditing-fairness(https://github.com/ bchugg/auditing-fairness).
 
 [Paper](url) 
 | [LocalDemo](#local-demo)
