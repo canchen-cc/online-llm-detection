@@ -20,36 +20,36 @@ python baseline_no_correction.py --file1 "exp_main/data/xsum.gemini_1.5_flash.ge
                              --file3 "exp_main/data/olympic.gemini_1.5_flash.gemma_2b.sampling_discrepancy.json" --type3 "real" \
                              --k 25 --iters 1000 --shift_time None --output_file "exp_main/results/raw_results/flash.gemma.baseline_no_correction.json"
 
-# The permutation test with no correction to the significance level (batch_size k=25)
+# The permutation test with no correction to the significance level (batch_size k=50)
 python baseline_no_correction.py --file1 "exp_main/data/xsum.gemini_1.5_flash.gemma_2b.sampling_discrepancy.json" --type1 "real" \
                              --file2 "exp_main/data/olympic.gemini_1.5_flash.gemma_2b.sampling_discrepancy.json" --type2 "samples" \
                              --file3 "exp_main/data/olympic.gemini_1.5_flash.gemma_2b.sampling_discrepancy.json" --type3 "real" \
                              --k 50 --iters 1000 --shift_time None --output_file "exp_main/results/raw_results/flash.gemma.baseline_no_correction.json"
 
-# The permutation test with no correction to the significance level (batch_size k=25)
+# The permutation test with no correction to the significance level (batch_size k=100)
 python baseline_no_correction.py --file1 "exp_main/data/xsum.gemini_1.5_flash.gemma_2b.sampling_discrepancy.json" --type1 "real" \
                              --file2 "exp_main/data/olympic.gemini_1.5_flash.gemma_2b.sampling_discrepancy.json" --type2 "samples" \
                              --file3 "exp_main/data/olympic.gemini_1.5_flash.gemma_2b.sampling_discrepancy.json" --type3 "real" \
                              --k 100 --iters 1000 --shift_time None --output_file "exp_main/results/raw_results/flash.gemma.baseline_no_correction.json"
 
-# The permutation test with no correction to the significance level (batch_size k=25)
+# The permutation test with no correction to the significance level (batch_size k=250)
 python baseline_no_correction.py --file1 "exp_main/data/xsum.gemini_1.5_flash.gemma_2b.sampling_discrepancy.json" --type1 "real" \
                              --file2 "exp_main/data/olympic.gemini_1.5_flash.gemma_2b.sampling_discrepancy.json" --type2 "samples" \
                              --file3 "exp_main/data/olympic.gemini_1.5_flash.gemma_2b.sampling_discrepancy.json" --type3 "real" \
                              --k 250 --iters 1000 --shift_time None --output_file "exp_main/results/raw_results/flash.gemma.baseline_no_correction.json"
 
-# The permutation test with no correction to the significance level (batch_size k=25)
+# The permutation test with no correction to the significance level (batch_size k=500)
 python baseline_no_correction.py --file1 "exp_main/data/xsum.gemini_1.5_flash.gemma_2b.sampling_discrepancy.json" --type1 "real" \
                              --file2 "exp_main/data/olympic.gemini_1.5_flash.gemma_2b.sampling_discrepancy.json" --type2 "samples" \
                              --file3 "exp_main/data/olympic.gemini_1.5_flash.gemma_2b.sampling_discrepancy.json" --type3 "real" \
                              --k 500 --iters 1000 --shift_time None --output_file "exp_main/results/raw_results/flash.gemma.baseline_no_correction.json"
 
-# The permutation test with no correction to the significance level (batch_size k=25)
+# The permutation test with no correction to the significance level (batch_size k=1000)
 python baseline_no_correction.py --file1 "exp_main/data/xsum.gemini_1.5_flash.gemma_2b.sampling_discrepancy.json" --type1 "real" \
                              --file2 "exp_main/data/olympic.gemini_1.5_flash.gemma_2b.sampling_discrepancy.json" --type2 "samples" \
                              --file3 "exp_main/data/olympic.gemini_1.5_flash.gemma_2b.sampling_discrepancy.json" --type3 "real" \
                              --k 1000 --iters 1000 --shift_time None --output_file "exp_main/results/raw_results/flash.gemma.baseline_no_correction.json"
 
-# Replace 'no_correction' with 'with_correction', we can get the results of comparisons between our method and the permutation test with correction to the significance level.
+# Replace 'no_correction' with 'with_correction', we can get the results (flash.gemma.baseline_with_correction.json) of comparisons between our method and the permutation test with correction to the significance level.
 
 echo "Script execution completed."
