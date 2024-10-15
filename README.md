@@ -49,10 +49,10 @@ Two scenarios are considered:
 * **Scenario 2:** Specifies the value of \( \epsilon\) based on 20 human-written texts. The value of \(d_*\) (or \(d_t\)) is estimated using samples collected in the first 10 time steps, after which hypothesis testing commences.
 
 ## Process
-* **Firstly**, we let a source model generate an equal number of texts based on each human-written text.
-* **Next**, we score all the human-written and LLM-generated texts.
-* **Then**, we use our methods to detect the source of a sequence of texts.
-* **For each significance level**, we calculate the false positive rate (FPR) if the source is human; otherwise, we report the rejection time, i.e., the time step at which the source is declared to be an LLM.
+* **Firstly**, we use source models to generate an equal number of texts based on each human-written text. (run_to_generate_main.sh)
+* **Next**, we use score functions to score all the human-written and LLM-generated texts. (run_to_score.sh)
+* **Then**, we use our methods to detect the source of a sequence of texts under both H0 and H1. (run_to_detect.sh)
+* **For each significance level**, we calculate the false positive rate (FPR) if the source is human; otherwise, we report the rejection time, i.e., the time step at which the source is declared to be an LLM. (plot_results.ipynb)
 
 
 ### Citation
