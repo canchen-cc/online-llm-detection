@@ -5,10 +5,10 @@
 | [OpenReview](https://openreview.net/forum?id=Bpcgcr8E8Z)
 
 ## Brief Info
-Our method detects the source of texts observed in a streaming fashion. We conduct tests in a black-box setting, meaning the model used for scoring texts is different from the source model used to generate them. The source models generate an equal number of synthetic texts based on human-written texts.
+Our method detects the source of texts observed in a streaming fashion. Tests are implemented in a black-box setting, meaning the model used for scoring texts is different from the source model used to generate them.
 
 ## Score Functions & Scoring Models
-We utilize 10 score functions to compute the scores of texts:
+Our method builds upon and complements existing offline detection techniques. Specifically, We utilize 10 score functions of existing detectors to compute the scores of texts:
 * Fast-DetectGPT (sampling_discrepancy/sampling_discrepancy_analytic)
 * DetectGPT (perturbation_100)
 * LRR 
