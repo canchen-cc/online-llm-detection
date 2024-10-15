@@ -2,8 +2,6 @@
 **This code is for ICLR 2025 paper "ONLINE DETECTING LLM-GENERATED TEXTS VIA SEQUENTIAL HYPOTHESIS TESTING BY BETTING "**, where we borrow or extend some code from [Fast-DetectGPT](https://github.com/baoguangsheng/fast-detect-gpt) and [auditing-fairness](https://github.com/bchugg/auditing-fairness).
 
 [Paper](url) 
-| [LocalDemo](#local-demo)
-| [OnlineDemo](http://region-9.autodl.pro:21504/)
 | [OpenReview](https://openreview.net/forum?id=Bpcgcr8E8Z)
 
 ## Brief Info
