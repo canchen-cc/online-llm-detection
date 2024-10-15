@@ -43,8 +43,8 @@ Both `./exp_main` and `./exp_gpt3to4` include the following common subdirectorie
   
 ## Scenarios
 Two scenarios are considered:
-* **Scenario 1 (oracle):** Assumes prior knowledge of parameters \(d_*\) and \( \epsilon\).
-* **Scenario 2:** Specifies the value of \( \epsilon\) based on 20 human-written texts. The value of \(d_*\) (or \(d_t\)) is estimated using samples collected in the first 10 time steps, after which hypothesis testing starts.
+* **Scenario 1 (oracle):** Assumes prior knowledge of parameters \(d_*\) and ε.
+* **Scenario 2:** Specifies the value of ε based on 20 human-written texts. The value of \(d_*\) (or \(d_t\)) is estimated using samples collected in the first 10 time steps, after which hypothesis testing starts.
 
 ## Process
 * **Firstly**, we use source models to generate an equal number of texts based on each human-written text. (run_to_generate_main.sh)
