@@ -1,9 +1,6 @@
 # ONLINE DETECTING LLM-GENERATED TEXTS
 **This code is for paper "ONLINE DETECTING LLM-GENERATED TEXTS VIA SEQUENTIAL HYPOTHESIS TESTING BY BETTING "**, where we borrow or extend some code from [Fast-DetectGPT](https://github.com/baoguangsheng/fast-detect-gpt) and [auditing-fairness](https://github.com/bchugg/auditing-fairness).
 
-[Paper](url) 
-| [arXiv]()
-
 ## Brief Info
 Our method detects the source of texts observed in a streaming fashion. Tests are implemented in a black-box setting, meaning the model used for scoring texts is different from the source model used to generate them.
 
@@ -54,6 +51,6 @@ Two scenarios are considered:
 
 
 ### Citation
-If you find this work useful, you can cite it with the following BibTex entry:
+If you find this work useful, you can cite it. #with the following BibTex entry:
 
    
