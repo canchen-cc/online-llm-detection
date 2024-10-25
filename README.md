@@ -51,6 +51,6 @@ Two scenarios are considered:
 
 
 ### Citation
-If you find this work useful, you can cite it. #with the following BibTex entry:
+If you find this work useful, you can cite it. 
 
    
