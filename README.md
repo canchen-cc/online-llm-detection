@@ -51,6 +51,16 @@ Two scenarios are considered:
 
 
 ### Citation
-If you find this work useful, you can cite it with the BibTex entry.
+If you find this work useful, you can cite it with this BibTex entry:
+
+@misc{chen2024onlinedetectingllmgeneratedtexts,
+      title={Online Detecting LLM-Generated Texts via Sequential Hypothesis Testing by Betting}, 
+      author={Can Chen and Jun-Kun Wang},
+      year={2024},
+      eprint={2410.22318},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2410.22318}, 
+}
 
    
